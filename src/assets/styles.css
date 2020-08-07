@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+/* taskCreator styles */
+.add-btn{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: #0e52c2;
+    border: 1.5px solid black;
+    border-radius: 0.3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+/* taskBanner styles */
+.banner-text{
+    
+    background-color: #0e52c2;
+    color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+
+}
+
+/*  */
+
+/* Hover */
+.add-btn:hover{
+    
+    background-color:rgba(61, 135, 255, 0.75);;
+    transition: all .2s;
+}
