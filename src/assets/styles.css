@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
 /* taskCreator styles */
-.add-btn{
+.btn-container{
 
     display: flex;
     flex-direction: column;
@@ -9,11 +9,12 @@
     align-items: center;
     text-align: center;
     margin: auto;
-    background-color: #0e52c2;
-    border: 1.5px solid black;
-    border-radius: 0.3rem;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn-container button{
     color: white;
+    border: 0.85px solid black;
 }
 
 /* taskBanner styles */
@@ -25,12 +26,43 @@
     text-align: center;
 
 }
+.fas-circle-doIt{
+    color: green;
+}
 
-/*  */
+.fas-circle-notDoIt{
+    color: red;
+}
+/* taskCreator styles */
+.newTask-container-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Hover */
+/* App styles */
+
+.table{
+    background-color: rgba(33, 33, 33, 0.95);
+}
+
+.table tr{
+    color: white;
+}
+
+.table .tBody-doIt{
+    background-color: green;
+}
+
+.table .tBody-notDoIt{
+    background-color: red;
+}
+
+
+/* Hovers */
 .add-btn:hover{
     
-    background-color:rgba(61, 135, 255, 0.75);;
+    background-color:rgba(61, 135, 255, 0.75);
     transition: all .2s;
 }

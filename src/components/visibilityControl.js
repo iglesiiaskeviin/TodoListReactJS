@@ -11,7 +11,7 @@ export const VisibilityControl = props => {
                 onChange={e => props.callback(e.target.checked)}
             />
             <label htmlFor="form-check-label">
-                Enseñar {props.desc}
+                Mostrar {props.desc}
             </label>
         </div>
     )

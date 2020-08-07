@@ -3,6 +3,8 @@ import { TaskRow } from "./components/taskRow";
 import { TaskBanner } from "./components/taskBanner";
 import { TaskCreator } from "./components/taskCreator";
 import { VisibilityControl } from "./components/visibilityControl";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 function TodoList() {
 
@@ -10,14 +12,11 @@ function TodoList() {
   
 
   const [taskItems, setTaskItems] = useState([
-    {name: 'Tarea de ejemplo 1', done: false},
-    {name: 'Tarea de ejemplo 2', done: false},
-    {name: 'Tarea de ejemplo 3', done: false},
-    {name: 'Tarea de ejemplo 4', done: false},
+    
   ]);
 
 
-  const [showCompleted, setShowCompleted] = useState(true);
+  const [showCompleted, setShowCompleted] = useState(false);
 
 
 /*   useEffect(() => {
@@ -63,29 +62,29 @@ function TodoList() {
       <TaskBanner userName={userName} taskDoIt={taskItems} />
       <TaskCreator callback={createNewTask}/>
       <table className="table table-striped table-bordered">
-        <thead>
+        <thead className="table-thead">
         <tr>
-          <th>Descripción</th>
-          <th>Realizado</th>
+          <th>Tareas por hacer <FontAwesomeIcon icon={faCheckCircle} className="fas-circle-notDoIt" /></th>
+          <th>¿Está realizada?</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody className="tBody-notDoIt">
             {taskTableRow(false)}
         </tbody>
       </table>
       <div className="bg-secondary-text-white text-center p2">
-        <VisibilityControl desc="Tarea completada" isChecked={showCompleted} callback={checked => setShowCompleted(checked)}/>
+        <VisibilityControl desc="tareas ya realizadas" isChecked={showCompleted} callback={checked => setShowCompleted(checked)}/>
       </div>
       {
         showCompleted && (
           <table className="table table-striped table-bordered">
-            <thead>
+            <thead className="table-thead">
               <tr>
-                <th>Descripción</th>
-                <th>Realizado</th>
+                <th>Tareas ya realizada <FontAwesomeIcon icon={faCheckCircle} className="fas-circle-doIt"/></th>
+                <th>Agregar a Tarea por hacer</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tBody-doIt">
               {taskTableRow(true)}
             </tbody>
           </table>
